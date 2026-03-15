@@ -1,0 +1,39 @@
+@import "./reset.css";
+
+:root {
+  --max-width: 1080px;
+  --border-radius: 10px;
+  --section-padding: 8rem;
+  --card-padding: 2.4rem;
+  --grid-gap: 2.4rem;
+
+  --headings-font: "Inter", sans-serif;
+  --paragraph-font: "Open Sans", sans-serif;
+
+  --background-dark-color: #0b0f19;
+  --background-light-color: #f8fafc;
+  --surface-color: #111827;
+  --border-color: #1f2937;
+
+  --primary-color: #6366f1;
+  --accent-color: #22d3ee;
+
+  --text-primary-color: #e5e7eb;
+  --text-secondary-color: #111827;
+  --muted-color: #9ca3af;
+
+  --hero-title: 5.2rem;
+  --heading-size: 3.2rem;
+  --subheading-size: 2rem;
+  --paragraph-size: 1.6rem;
+  --muted-text-size: 1.4rem;
+
+  --paragraph-line-height: 1.7;
+  --heading-line-height: 1.2;
+
+  --transition-speed: 0.25s;
+  
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
