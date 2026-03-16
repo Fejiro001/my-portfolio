@@ -1,44 +1,101 @@
 @import "./reset.css";
 
 :root {
-    --max-width: 1080px;
-    --border-radius: 10px;
-    --section-padding: 8rem;
-    --card-padding: 2.4rem;
-    --grid-gap: 2.4rem;
+  --max-width: 1080px;
+  --border-radius: 10px;
+  --section-padding: 8rem;
+  --card-padding: 2.4rem;
+  --grid-gap: 2.4rem;
 
-    --headings-font: "Inter", sans-serif;
-    --paragraph-font: "Open Sans", sans-serif;
+  --headings-font: "Inter", sans-serif;
+  --paragraph-font: "Open Sans", sans-serif;
 
-    --background-dark-color: #0b0f19;
-    --background-light-color: #f8fafc;
-    --surface-color: #111827;
-    --border-color: #1f2937;
+  --background-dark-color: #0b0f19;
+  --background-light-color: #f8fafc;
+  --surface-color: #111827;
+  --border-color: #1f2937;
 
-    --primary-color: #6366f1;
-    --accent-color: #22d3ee;
+  --primary-color: #6366f1;
+  --accent-color: #22d3ee;
 
-    --text-primary-color: #e5e7eb;
-    --text-secondary-color: #111827;
-    --muted-color: #9ca3af;
+  --text-primary-color: #e5e7eb;
+  --text-secondary-color: #111827;
+  --muted-color: #9ca3af;
 
-    --hero-title: 5.2rem;
-    --heading-size: 3.2rem;
-    --subheading-size: 2rem;
-    --paragraph-size: 1.6rem;
-    --muted-text-size: 1.4rem;
+  --hero-title: 5.2rem;
+  --heading-size: 3.2rem;
+  --subheading-size: 2rem;
+  --paragraph-size: 1.6rem;
+  --muted-text-size: 1.4rem;
 
-    --paragraph-line-height: 1.7;
-    --heading-line-height: 1.2;
+  --paragraph-line-height: 1.7;
+  --heading-line-height: 1.2;
 
-    --transition-speed: 0.25s;
+  --transition-speed: 0.25s;
 
-    --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.15);
-    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.25);
-    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
 .container {
-    max-width: min(100% - 30px, var(--max-width));
-    margin: 0 auto;
+  max-width: min(100% - 30px, var(--max-width));
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headings-font);
+}
+
+p,
+a,
+button {
+  font-family: var(--paragraph-font);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 6rem;
+  background-color: var(--background-dark-color);
+}
+
+.text-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.header-container,
+.navigation-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.app-name {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 6rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, var(--accent-color), var(--primary-color));
+}
+
+.navigation-list a {
+  color: var(--muted-color);
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.navigation-list a:hover {
+  color: #fff;
 }
