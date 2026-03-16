@@ -42,3 +42,60 @@
   max-width: min(100% - 30px, var(--max-width));
   margin: 0 auto;
 }
+
+h1,
+h2,
+h3 {
+  font-family: var(--headings-font);
+}
+
+p,
+a,
+button {
+  font-family: var(--paragraph-font);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 6rem;
+  background-color: var(--background-dark-color);
+}
+
+.text-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.header-container,
+.navigation-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.app-name {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 6rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, var(--accent-color), var(--primary-color));
+}
+
+.navigation-list a {
+  color: var(--muted-color);
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.navigation-list a:hover {
+  color: #fff;
+}
