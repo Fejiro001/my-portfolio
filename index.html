@@ -15,52 +15,56 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     />
-    <script src="https://kit.fontawesome.com/3c15a18b96.js" crossorigin="anonymous"></script>
     <script src="./assets/script/app.js" defer></script>
   </head>
   <body>
     <header>
       <div class="container header-container">
-        <h1 class="app-name text-gradient">Fejiro Abere</h1>
+        <h1 class="app-name text-gradient">
+          <a href="#home"> Fejiro Abere </a>
+        </h1>
         <nav>
           <ul class="navigation-list">
             <li>
-              <a href="#">About</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#">Skills</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <section class="hero-section">
+      <section id="home" class="hero-section">
         <div class="container hero-container">
           <div class="hero-content">
             <h2 class="hero-title">Hi, I'm Fejiro</h2>
             <h3 class="job-title">Full-Stack Developer</h3>
             <p>I build clean and responsive websites and applications</p>
-            <a class="hero-btn" href="">View Projects</a>
+            <a class="primary-btn hero-btn" href="">View Projects</a>
           </div>
           <div class="hero-image">
             <img src="./assets/media/images/fejiro-avatar.png" alt="Fejiro Abere Avatar" />
           </div>
         </div>
       </section>
-      <section class="about-section">
+      <section id="about" class="about-section">
         <div class="container about-container">
           <div class="about-image">
             <img src="./assets/media/images/about-image.png" alt="Profile image of Fejiro Abere" loading="lazy" />
           </div>
           <div class="about-content">
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title" id="about-title">About</h2>
             <p class="about-paragraph">
               <span>
                 Hi! I’m Fejiro Abere, a Frontend Developer and Computer Engineering graduate currently studying Software Development at
@@ -75,7 +79,7 @@
           </div>
         </div>
       </section>
-      <section class="skills-section">
+      <section id="skills" class="skills-section">
         <div class="container skills-container">
           <h2 class="section-title">Skills / Tech Stack</h2>
           <ul class="skills-list">
@@ -118,6 +122,135 @@
             <li>
               <img class="skill-icon" src="./assets/media/images/icons/figma-icon.svg" alt="Figma icon" />
               <p>Figma</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="projects" class="projects-section">
+        <div class="container projects-container">
+          <h2 class="section-title">Projects</h2>
+          <ul class="projects-list">
+            <li class="project-card">
+              <div class="project-img">
+                <img
+                  src="./assets/media/images/projects/weather-app.png"
+                  alt="Weather application home page showing weather in a location"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Weather App</h3>
+                <p>
+                  A responsive weather application that provides real-time conditions, hourly and 7-day forecasts, and detailed metrics such
+                  as humidity, wind speed, and precipitation. Includes features like unit switching, multi-location comparison, saved
+                  locations, and smart weather-based recommendations.
+                </p>
+                <ul class="tech-used-list">
+                  <li>React</li>
+                  <li>API</li>
+                  <li>Zustand</li>
+                  <li>Geolocation</li>
+                  <li>Tailwind CSS</li>
+                </ul>
+                <div class="project-btns">
+                  <a target="_blank" href="https://weather-app-pearl-seven-35.vercel.app" class="primary-btn">
+                    Live Demo
+                    <img class="link-icon" src="./assets/media/images/icons/link-icon.svg" alt="Link icon" />
+                  </a>
+                  <a target="_blank" href="https://github.com/Fejiro001/weather-app" class="secondary-btn">
+                    GitHub
+                    <img class="link-icon" src="./assets/media/images/icons/link-icon.svg" alt="Link icon" />
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="project-card">
+              <div class="project-img">
+                <img
+                  src="./assets/media/images/projects/scoot-website.png"
+                  alt="Weather application home page showing weather in a location"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Scoot Website</h3>
+                <p>
+                  A responsive multi-page website for a transportation service, featuring clean layouts, structured navigation, and
+                  interactive UI elements. Contributed to building the home and “coming soon” pages, as well as improving code quality
+                  through cleanup and bug fixes to ensure a consistent and maintainable codebase.
+                </p>
+                <ul class="tech-used-list">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Responsive Design</li>
+                  <li>Team Project</li>
+                </ul>
+                <div class="project-btns">
+                  <a target="_blank" href="https://fejiro001.github.io/scoot_website" class="primary-btn">
+                    Live Demo
+                    <img class="link-icon" src="./assets/media/images/icons/link-icon.svg" alt="Link icon" />
+                  </a>
+                  <a target="_blank" href="https://github.com/Fejiro001/scoot_website" class="secondary-btn">
+                    GitHub
+                    <img class="link-icon" src="./assets/media/images/icons/link-icon.svg" alt="Link icon" />
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="project-card">
+              <div class="project-img">
+                <img src="./assets/media/images/projects/easybank-website.png" alt="Landing page for easybank company" />
+              </div>
+              <div class="project-content">
+                <h3>EasyBank Landing Page</h3>
+                <p>
+                  A modern, responsive banking landing page with a clean layout and strong visual hierarchy. Implements interactive
+                  navigation, hover states, and optimized layouts across different screen sizes to deliver a smooth user experience.
+                </p>
+                <ul class="tech-used-list">
+                  <li>HTML</li>
+                  <li>Sass</li>
+                  <li>CSS</li>
+                  <li>Responsive Design</li>
+                </ul>
+                <div class="project-btns">
+                  <a target="_blank" href="https://fejiro001.github.io/easybank-landing-page-master" class="primary-btn">
+                    Live Demo
+                    <img class="link-icon" src="./assets/media/images/icons/link-icon.svg" alt="Link icon" />
+                  </a>
+                  <a target="_blank" href="https://github.com/Fejiro001/easybank-landing-page-master" class="secondary-btn">
+                    GitHub
+                    <img class="link-icon" src="./assets/media/images/icons/link-icon.svg" alt="Link icon" />
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="project-card">
+              <div class="project-img">
+                <img src="./assets/media/images/projects/advice-generator-app.png" alt="Advice generator web application" />
+              </div>
+              <div class="project-content">
+                <h3>Advice Generator</h3>
+                <p>
+                  A responsive web application that fetches and displays random pieces of advice from an external API. Users can generate
+                  new advice with a single interaction, with smooth UI updates and interactive states designed for an engaging user
+                  experience.
+                </p>
+                <ul class="tech-used-list">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>API</li>
+                </ul>
+                <div class="project-btns">
+                  <a target="_blank" href="https://fejiro001.github.io/advice-generator-app-main" class="primary-btn">
+                    Live Demo
+                    <img class="link-icon" src="./assets/media/images/icons/link-icon.svg" alt="Link icon" />
+                  </a>
+                  <a target="_blank" href="https://github.com/Fejiro001/advice-generator-app-main?tab=readme-ov-file" class="secondary-btn">
+                    GitHub
+                    <img class="link-icon" src="./assets/media/images/icons/link-icon.svg" alt="Link icon" />
+                  </a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
