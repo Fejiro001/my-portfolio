@@ -380,6 +380,11 @@ header {
   }
 
   nav {
+    display: none;
+  }
+
+  .show-menu {
+    display: block;
     position: absolute;
     top: 10rem;
     padding: 3rem 2rem;
