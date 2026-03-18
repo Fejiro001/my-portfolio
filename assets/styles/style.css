@@ -253,6 +253,10 @@ header {
   transition: all var(--transition-speed) ease-in-out;
 }
 
+.skills-list li:hover {
+  box-shadow: 0 3px 15px 0 rgb(34 211 238);
+}
+
 .skills-list img {
   width: 8rem;
   filter: invert(79%) sepia(19%) saturate(4635%) hue-rotate(146deg) brightness(96%) contrast(95%);
