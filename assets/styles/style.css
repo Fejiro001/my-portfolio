@@ -1,11 +1,12 @@
 @import "./reset.css";
 
 :root {
-  --max-width: 1080px;
+  --max-width: 1240px;
   --border-radius: 5px;
   --section-padding: 8rem;
   --card-padding: 2.4rem;
   --grid-gap: 2.4rem;
+  --section-gap: 4rem;
 
   --headings-font: "Inter", sans-serif;
   --paragraph-font: "Open Sans", sans-serif;
@@ -29,7 +30,7 @@
   --muted-text-size: 1.4rem;
 
   --paragraph-line-height: 1.7;
-  --heading-line-height: 1.2;
+  --heading-line-height: 3.2;
 
   --transition-speed: 0.25s;
 
@@ -39,7 +40,7 @@
 }
 
 .container {
-  max-width: min(100% - 30px, var(--max-width));
+  max-width: min(100% - 270px, var(--max-width));
   margin-inline: auto;
 }
 
@@ -63,8 +64,8 @@ a {
   text-decoration: none;
 }
 
-section {
-  padding-block: var(--section-padding);
+section:not(:nth-child(1)) {
+  margin-block: var(--section-padding);
 }
 
 /* HEADER */
@@ -73,8 +74,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  margin-top: 3.2rem;
-  height: 6rem;
+  padding-block: 3rem;
+  backdrop-filter: blur(15px);
+  background-color: rgb(11 15 25 / 0.4);
 }
 
 .text-gradient {
@@ -158,4 +160,50 @@ header {
   padding: 1.4rem 2.5rem;
   border-radius: var(--border-radius);
   margin-top: 1.5rem;
+}
+
+.section-title {
+  font-size: var(--heading-size);
+  line-height: var(--heading-line-height);
+  color: var(--text-primary-color);
+}
+
+/* ABOUT */
+.about-section {
+  background-color: var(--background-light-color);
+}
+
+.about-container {
+  background:
+    url(../media/images/bg-pattern.png) no-repeat center/cover, var(--background-dark-color);
+  border-radius: var(--border-radius);
+  padding: var(--card-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--section-padding);
+}
+
+.about-container div {
+  width: 50%;
+}
+
+.about-paragraph {
+  color: var(--muted-color);
+  font-size: var(--paragraph-size);
+  line-height: var(--paragraph-line-height);
+}
+
+.about-paragraph span {
+  display: block;
+  padding-bottom: 2rem;
+}
+
+.about-image {
+  filter: grayscale(1);
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.about-image:hover {
+  filter: grayscale(0);
 }
