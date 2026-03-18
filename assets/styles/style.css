@@ -26,9 +26,9 @@
 
   --hero-title: 5.2rem;
   --heading-size: 3.2rem;
-  --subheading-size: 2rem;
+  --subheading-size: 2.4rem;
   --paragraph-size: 1.6rem;
-  --muted-text-size: 1.4rem;
+  --muted-text-size: 1.3rem;
 
   --paragraph-line-height: 1.7;
   --heading-line-height: 3.2;
@@ -74,11 +74,25 @@ section:not(:nth-child(1)) {
   }
 }
 
+.primary-btn,
+.secondary-btn {
+  display: flex;
+  justify-content: center;
+  font-size: var(--muted-text-size);
+  width: 12rem;
+  padding: 1.2rem;
+  border-radius: var(--border-radius);
+  color: #fff;
+}
+
 .primary-btn {
   background-color: var(--primary-color);
-  color: #fff;
-  padding: 1.4rem 2.5rem;
-  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.secondary-btn {
+  background-color: var(--background-dark-color);
+  border: 1px solid var(--primary-color);
 }
 
 /* HEADER */
@@ -312,8 +326,13 @@ header {
   padding: var(--card-padding);
 }
 
+.project-content h3 {
+  font-size: var(--subheading-size);
+}
+
 .project-content p {
   color: var(--muted-color);
+  font-size: var(--paragraph-size);
 }
 
 .tech-used-list,
@@ -322,6 +341,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .project-btns a {
@@ -331,13 +351,16 @@ header {
 
 .tech-used-list li {
   background-color: rgb(34 211 238);
+  font-size: var(--muted-text-size);
   color: var(--background-dark-color);
+  font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 5rem;
 }
 
 .link-icon {
-  width: 2rem;
+  filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(307deg) brightness(106%) contrast(103%);
+  width: 1.5rem;
 }
 
 @media (max-width: 768px) {
