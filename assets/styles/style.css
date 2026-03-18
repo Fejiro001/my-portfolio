@@ -340,4 +340,26 @@ header {
   width: 2rem;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --flex-gap: 2rem;
+  }
 
+  .container {
+    max-width: min(100% - 170px, var(--max-width));
+  }
+
+  .header-container {
+    flex-direction: column;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-container div {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+}
