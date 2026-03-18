@@ -2,7 +2,7 @@
 
 :root {
   --max-width: 1080px;
-  --border-radius: 10px;
+  --border-radius: 5px;
   --section-padding: 8rem;
   --card-padding: 2.4rem;
   --grid-gap: 2.4rem;
@@ -40,7 +40,7 @@
 
 .container {
   max-width: min(100% - 30px, var(--max-width));
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 h1,
@@ -63,9 +63,18 @@ a {
   text-decoration: none;
 }
 
+section {
+  padding-block: var(--section-padding);
+}
+
+/* HEADER */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 3.2rem;
   height: 6rem;
-  background-color: var(--background-dark-color);
 }
 
 .text-gradient {
@@ -98,4 +107,55 @@ header {
 
 .navigation-list a:hover {
   color: #fff;
+}
+
+/* HERO */
+.hero-section {
+  padding-block: 18rem 12rem;
+  background:
+    url(../media/images/bg-pattern.png) no-repeat center/cover,
+    linear-gradient(135deg, var(--background-dark-color) 40%, var(--primary-color));
+  color: #fff;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+}
+
+.hero-content {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.hero-title {
+  font-size: var(--hero-title);
+}
+
+.hero-image {
+  max-width: 30rem;
+  width: 100%;
+}
+
+.job-title {
+  font-size: var(--heading-size);
+  font-family: var(--paragraph-font);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent-color);
+  text-shadow: 0px 0px 8px var(--accent-color);
+}
+
+.hero-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1.4rem 2.5rem;
+  border-radius: var(--border-radius);
+  margin-top: 1.5rem;
 }
