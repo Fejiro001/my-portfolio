@@ -15,6 +15,13 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="./assets/script/app.js" defer></script>
   </head>
   <body>
@@ -291,25 +298,36 @@
               </ul>
             </div>
             <div class="form-container">
-              <form action="">
+              <form id="contact-form">
                 <div class="form-field">
                   <label for="name">Name</label>
-                  <input type="text" name="name" id="name" />
+                  <input type="text" name="name" id="name" required />
                 </div>
                 <div class="form-field">
                   <label for="email">Email</label>
-                  <input type="email" name="email" id="email" />
+                  <input type="email" name="email" id="email" required />
                 </div>
                 <div class="form-field">
                   <label for="message">Message</label>
-                  <textarea rows="5" name="message" id="message"></textarea>
+                  <textarea rows="5" name="message" id="message" required></textarea>
                 </div>
-                <button class="primary-btn" type="button">Send Message</button>
+                <button id="form-btn" class="primary-btn" type="submit">Send Message</button>
               </form>
             </div>
           </article>
         </div>
       </section>
+      <dialog id="success-message">
+        <div class="container success-container">
+          <div>
+            <p>Confirmation</p>
+            <button class="close-btn" title="Close popup">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </div>
+          <p>Your message has been sent successfully! You can close this popup.</p>
+        </div>
+      </dialog>
     </main>
     <footer>
       <div class="container">&copy; 2026 Fejiro Abere</div>
