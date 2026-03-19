@@ -34,6 +34,7 @@
   --heading-line-height: 3.2;
 
   --transition-speed: 0.25s;
+  --transition: all var(--transition-speed) ease-in-out;
 
   --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.15);
   --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.25);
@@ -66,6 +67,15 @@ a {
 }
 
 /* SHARED STYLES */
+.close-btn,
+.primary-btn,
+.navigation-list a,
+.about-image,
+.skills-list li,
+.socials-list img {
+  transition: var(--transition);
+}
+
 section:not(:nth-child(1)) {
   padding-block: var(--section-padding);
 
@@ -88,7 +98,6 @@ section:not(:nth-child(1)) {
 .primary-btn {
   background-color: var(--primary-color);
   text-align: center;
-  transition: all var(--transition-speed) ease-in-out;
 }
 
 .primary-btn:hover {
@@ -168,7 +177,6 @@ header {
 
 .navigation-list a {
   color: var(--muted-color);
-  transition: all var(--transition-speed) ease-in-out;
 }
 
 .navigation-list a:hover {
@@ -257,7 +265,6 @@ header {
 
 .about-image {
   filter: grayscale(1);
-  transition: all var(--transition-speed) ease-in-out;
   padding: 1rem;
 }
 
@@ -301,7 +308,6 @@ header {
   background-color: var(--surface-color);
   border-radius: var(--border-radius);
   box-shadow: 0 3px 10px 0 rgb(34 211 238 /0.5);
-  transition: all var(--transition-speed) ease-in-out;
 }
 
 .skills-list li:hover {
@@ -413,7 +419,6 @@ header {
 .socials-list img {
   filter: invert(79%) sepia(19%) saturate(4635%) hue-rotate(146deg) brightness(96%) contrast(95%);
   width: 3rem;
-  transition: all var(--transition-speed) ease-in-out;
 }
 
 .socials-list img:hover {
@@ -460,6 +465,56 @@ footer {
   text-align: center;
   line-height: 8rem;
   height: 8rem;
+}
+
+/* SUCCESS POPUP MESSAGE */
+.success-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background-color: rgba(11, 15, 25, 0.9);
+  height: 100dvh;
+  width: 100%;
+}
+
+.success-container {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  padding: var(--card-padding);
+  max-width: 50rem;
+  width: 100%;
+}
+
+.success-container > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--flex-gap);
+  padding-bottom: 2rem;
+}
+
+.success-container div p {
+  font-size: var(--paragraph-size);
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.close-btn {
+  color: rgb(196, 0, 0);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+}
+
+.close-btn:hover {
+  background-color: rgb(196, 0, 0);
+  color: #fff;
+}
+
+.success-container p {
+  font-size: 2rem;
 }
 
 @media (max-width: 1024px) {
