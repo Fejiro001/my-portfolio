@@ -2,7 +2,7 @@
 
 :root {
   --max-width: 1240px;
-  --border-radius: 5px;
+  --border-radius: 10px;
   --section-padding: 8rem;
   --card-padding: 2.4rem;
   --grid-gap: 5.6rem;
@@ -31,7 +31,7 @@
   --muted-text-size: 1.3rem;
 
   --paragraph-line-height: 1.7;
-  --heading-line-height: 3.2;
+  --heading-line-height: 1.2;
 
   --transition-speed: 0.25s;
   --transition: all var(--transition-speed) ease-in-out;
@@ -42,7 +42,7 @@
 }
 
 .container {
-  max-width: min(100% - 270px, var(--max-width));
+  max-width: min(100% - 40px, var(--max-width));
   margin-inline: auto;
 }
 
@@ -50,6 +50,7 @@ h1,
 h2,
 h3 {
   font-family: var(--headings-font);
+  line-height: var(--heading-line-height);
 }
 
 p,
@@ -69,19 +70,23 @@ a {
 /* SHARED STYLES */
 .close-btn,
 .primary-btn,
+.secondary-btn,
 .navigation-list a,
 .about-image,
 .skills-list li,
-.socials-list img {
+.socials-list img,
+.project-card {
   transition: var(--transition);
 }
 
 section:not(:nth-child(1)) {
   padding-block: var(--section-padding);
+}
 
-  h2 {
-    padding-bottom: var(--section-gap);
-  }
+.section-title {
+  font-size: var(--heading-size);
+  color: var(--text-primary-color);
+  padding-bottom: var(--section-gap);
 }
 
 .primary-btn,
@@ -100,13 +105,17 @@ section:not(:nth-child(1)) {
   text-align: center;
 }
 
-.primary-btn:hover {
-  transform: translateY(-5px);
+.secondary-btn {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
 }
 
-.secondary-btn {
-  background-color: var(--background-dark-color);
-  border: 1px solid var(--primary-color);
+.primary-btn:hover {
+  background-color: var(--accent-color);
+}
+
+.secondary-btn:hover {
+  background-color: var(--primary-color);
 }
 
 .projects-list,
@@ -123,6 +132,17 @@ section:not(:nth-child(1)) {
 .contact-container article > div {
   flex: 1 1 calc(50% - 4rem);
   max-width: calc(50% - 4rem);
+}
+
+.project-card,
+.skills-list li {
+  box-shadow: 0 3px 10px 0 rgb(34 211 238 /0.2);
+}
+
+.project-card:hover,
+.skills-list li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 3px 15px 0 rgba(34, 211, 238, 0.6);
 }
 
 .about-section,
@@ -187,6 +207,7 @@ header {
 .hero-section {
   padding-block: 22rem 12rem;
   background:
+    radial-gradient(circle at 70% 40%, rgba(34, 211, 238, 0.15), transparent 40%),
     url(../media/images/bg-pattern.png) no-repeat center/cover,
     linear-gradient(135deg, var(--background-dark-color) 40%, var(--primary-color));
   color: #fff;
@@ -233,16 +254,7 @@ header {
   font-size: 1.8rem;
 }
 
-.section-title {
-  font-size: var(--heading-size);
-  color: var(--text-primary-color);
-}
-
 /* ABOUT */
-#about-title {
-  padding-bottom: 2rem;
-}
-
 .about-container {
   gap: var(--flex-gap);
   background:
@@ -307,11 +319,6 @@ header {
   color: var(--accent-color);
   background-color: var(--surface-color);
   border-radius: var(--border-radius);
-  box-shadow: 0 3px 10px 0 rgb(34 211 238 /0.5);
-}
-
-.skills-list li:hover {
-  box-shadow: 0 3px 15px 0 rgb(34 211 238);
 }
 
 .skills-list img {
@@ -336,7 +343,6 @@ header {
   display: grid;
   background-color: var(--surface-color);
   border-radius: var(--border-radius);
-  box-shadow: 0 3px 10px 0 rgb(34 211 238 /0.5);
   overflow: hidden;
 }
 
@@ -386,9 +392,10 @@ header {
 }
 
 .tech-used-list li {
-  background-color: rgb(34 211 238);
+  background-color: rgba(34, 211, 238, 0.1);
+  color: var(--accent-color);
+  border: 1px solid rgba(34, 211, 238, 0.3);
   font-size: var(--muted-text-size);
-  color: var(--text-secondary-color);
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 5rem;
@@ -445,8 +452,13 @@ textarea {
   width: 100%;
   color: var(--text-primary-color);
   background-color: transparent;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--border-color);
   padding: 1rem 0;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom-color: var(--accent-color);
 }
 
 textarea {
@@ -463,8 +475,8 @@ footer {
   background-color: var(--background-dark-color);
   color: var(--text-primary-color);
   text-align: center;
-  line-height: 8rem;
-  height: 8rem;
+  line-height: 10rem;
+  height: 10rem;
 }
 
 /* SUCCESS POPUP MESSAGE */
@@ -520,10 +532,7 @@ footer {
 @media (max-width: 1024px) {
   :root {
     --flex-gap: 2rem;
-  }
-
-  .container {
-    max-width: min(100% - 70px, var(--max-width));
+    --section-gap: 2rem;
   }
 
   nav {
