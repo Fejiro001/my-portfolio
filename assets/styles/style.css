@@ -437,6 +437,15 @@ form button {
   font-weight: 500;
 }
 
+/* FOOTER */
+footer {
+  background-color: var(--background-dark-color);
+  color: var(--text-primary-color);
+  text-align: center;
+  line-height: 8rem;
+  height: 8rem;
+}
+
 @media (max-width: 1024px) {
   :root {
     --flex-gap: 2rem;
