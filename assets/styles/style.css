@@ -101,7 +101,6 @@ section:not(:nth-child(1)) {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: var(--flex-gap);
 }
 
 .about-container div,
@@ -229,6 +228,7 @@ header {
 }
 
 .about-container {
+  gap: var(--flex-gap);
   background:
     url(../media/images/bg-pattern.png) no-repeat center/cover,
     var(--background-dark-color);
@@ -385,6 +385,7 @@ header {
 
 /* CONTACT */
 .contact-container article {
+  gap: var(--section-padding);
   background-color: var(--background-dark-color);
   border-radius: var(--border-radius);
   padding: 4rem;
@@ -413,7 +414,12 @@ form {
   flex-direction: column;
 }
 
+.form-container {
+  width: 100%;
+}
+
 label {
+  text-align: left;
   display: block;
   color: var(--text-primary-color);
   margin-bottom: 1rem;
@@ -511,5 +517,13 @@ footer {
     flex: 1 1 100%;
     max-width: 100%;
     text-align: center;
+  }
+
+  .socials-list {
+    justify-content: center;
+  }
+
+  form button {
+    align-self: center;
   }
 }
