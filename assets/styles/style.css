@@ -258,7 +258,6 @@ header {
 
 .about-image img {
   width: 100%;
-  /* min-width: 16rem; */
 }
 
 .about-image:hover {
@@ -513,6 +512,14 @@ footer {
     max-width: 20rem;
   }
 
+  .about-paragraph {
+    font-size: var(--muted-text-size);
+  }
+
+  .about-image img {
+    max-width: 30rem;
+  }
+
   .skills-list {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   }
@@ -552,6 +559,15 @@ footer {
 
   .project-img img {
     height: 100%;
+  }
+
+  .tech-used-list,
+  .project-btns {
+    justify-content: center;
+  }
+
+  .tech-used-list li {
+    max-width: 12rem;
   }
 
   .tech-used-list li,
