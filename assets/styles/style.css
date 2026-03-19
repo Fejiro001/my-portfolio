@@ -88,6 +88,11 @@ section:not(:nth-child(1)) {
 .primary-btn {
   background-color: var(--primary-color);
   text-align: center;
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.primary-btn:hover {
+  transform: translateY(-5px);
 }
 
 .secondary-btn {
