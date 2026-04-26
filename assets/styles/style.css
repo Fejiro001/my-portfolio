@@ -22,7 +22,7 @@
 
   --text-primary-color: #e5e7eb;
   --text-secondary-color: #111827;
-  --muted-color: #9ca3af;
+  --muted-color: #d4d4d6;
 
   --hero-title: 5.2rem;
   --heading-size: 3.2rem;
@@ -164,7 +164,7 @@ header {
   z-index: 1000;
   width: 100%;
   padding-block: 2rem;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   background: linear-gradient(135deg, rgba(11, 15, 25, 0.5) 50%, rgba(99, 101, 241, 0.5));
 }
 
@@ -272,7 +272,7 @@ header {
 
 .about-paragraph span {
   display: block;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .about-image {
@@ -429,7 +429,7 @@ header {
 }
 
 .socials-list img:hover {
-  filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(307deg) brightness(106%) contrast(103%);
+  transform: scale(1.2);
 }
 
 form {
